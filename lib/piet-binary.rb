@@ -20,7 +20,7 @@ module Piet
     def command_path(command)
       path = which(command)
 
-      if path.blank?
+      if path.nil? || path.empty?
 
         folder = if OS.osx?
           'osx'
